@@ -2,17 +2,29 @@
 using UnityEngine;
 
 
-namespace Player
+namespace PlayableCharacters
 {
 	
 	public class Character
 	{
 		public string name;
-		public Character(string name)
+		[SerializeField]
+		private int healthPoints=10;
+        public  Character(string name)
 		{
 			this.name = name;
-			Debug.Log("Hola, soy" + name);
+			Debug.Log("Hola, soy" + this.name);
 		}
+		~Character()
+		{
+			Debug.Log("Destroyed.");
+		}
+
+		public virtual void takeDamage() {
+			if (healthPoints <= 0) healthPoints--;
+
+		}
+
 
 	}
 
