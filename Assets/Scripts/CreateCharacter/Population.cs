@@ -15,6 +15,7 @@ public class Enemy : Character
 		base.takeDamage();
 		Debug.Log("Enemy hit taken");
 	}
+
 }
 
 
@@ -28,5 +29,10 @@ public class Player : Character
 	public override void takeDamage()
 	{ 
 		Debug.Log("Player hit taken");
+
 	}
+	CharacterKilled killed = (Character killer, Character killed) =>
+	{
+		Debug.Log($"{killer.name} killed {killed.name}");
+	};
 }

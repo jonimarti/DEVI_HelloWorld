@@ -1,27 +1,41 @@
 ﻿using PlayableCharacters;
+using System;
 using System.Collections;
 using UnityEngine;
+using static PlayableCharacters.Character;
 
 namespace Assets.Scripts
 {
 	public class CreateCharacter : MonoBehaviour
 	{
 		Character[] EnemyCharacters = new Enemy[2];
-
-		// Use this for initialization
+		Player player = new Player("test");
+		
+	
 		void Start()
 		{
 
 			for (int runs = 0; runs < 2; runs++)
 			{
-				EnemyCharacters[runs] = new Enemy("Character"+runs);
+				Enemy enemy = new Enemy("Character" + runs);
+				enemy.OnKilled += killed;
+				EnemyCharacters[runs] = enemy;
+				
 			}
+
+			player.Hit(EnemyCharacters);
 		}
+
+
+		CharacterKilled killed = (Character killer, Character killed) =>
+		{
+			Debug.Log("Im Dead");
+		};
 
 		// Update is called once per frame
 		void Update()
 		{
-			Hit(EnemyCharacters);
+			
 
 		}
 
@@ -32,6 +46,11 @@ namespace Assets.Scripts
 				Debug.Log("hit");
 				character.takeDamage();
 			}
+		}
+
+		private void OnCharacterKilled(Character killer, Character killed)
+		{
+			Debug.Log($"{killer.name} killed {killed.name}");
 		}
 
 	}
