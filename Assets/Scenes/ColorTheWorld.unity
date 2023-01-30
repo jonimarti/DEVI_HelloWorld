@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 122749506}
   - component: {fileID: 122749505}
+  - component: {fileID: 122749507}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -152,6 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1745d7b71fd52fe4baf0967831af81e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  color: {r: 0.08116765, g: 0.18493377, b: 0.9056604, a: 0}
+  findByTag: 1
+  choosenTag: Blue
 --- !u!4 &122749506
 Transform:
   m_ObjectHideFlags: 0
@@ -167,6 +171,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &122749507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122749504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1745d7b71fd52fe4baf0967831af81e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 1, g: 0.24667051, b: 0.23113209, a: 0}
+  findByTag: 1
+  choosenTag: Red
 --- !u!1 &462653336
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +201,7 @@ GameObject:
   - component: {fileID: 462653341}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,9 +309,10 @@ GameObject:
   - component: {fileID: 615151900}
   - component: {fileID: 615151899}
   - component: {fileID: 615151898}
+  - component: {fileID: 615151903}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -387,6 +407,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &615151903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615151897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cecfeff1235bb439144e572e4ed450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &638841134
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +544,7 @@ GameObject:
   - component: {fileID: 640152977}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
