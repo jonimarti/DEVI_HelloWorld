@@ -34,9 +34,9 @@ namespace Juego
  * https://docs.unity3d.com/Manual/PlatformDependentCompilation.html
  */
 #if UNITY_ANDROID
-        private void Trapi()
+        private void OnlyInAndroid()
         {
-
+        //TODO: some stuff en android 
         }
 #endif
 

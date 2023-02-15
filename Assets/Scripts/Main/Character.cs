@@ -23,7 +23,6 @@ namespace Juego
          * Un evento que se puede llamar desde esta clase y notificar a los suscriptores del evento (0, 1 o varios)
          */
         public event CharacterKilledHandled OnKilled;
-
         private int kills;
         private Status status;
 
