@@ -25,7 +25,10 @@ namespace Juego
         {
             // Linq. First: Obtener el primer elemento de la lisa que cumpla con la expresión
             var enemy = enemies.First(e => e.Name == "Pepito");
-            enemy.Hit(player, enemy);
+            Debug.Log("Encontrado! "+enemy);
+            
+            
+            //   enemy.Hit(player, enemy);
             
         }
 

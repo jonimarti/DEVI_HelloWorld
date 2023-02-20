@@ -8,14 +8,15 @@ namespace Assets.Scripts
 {
 	public class CreateCharacter : MonoBehaviour
 	{
-		Character[] EnemyCharacters = new Enemy[2];
+		const int MaxEnemies = 10;
+		Character[] EnemyCharacters = new Enemy[MaxEnemies];
 		Player player = new Player("test");
 		
 	
 		void Start()
 		{
 
-			for (int runs = 0; runs < 2; runs++)
+			for (int runs = 0; runs < MaxEnemies; runs++)
 			{
 				Enemy enemy = new Enemy("Character" + runs);
 				enemy.OnKilled += killed;

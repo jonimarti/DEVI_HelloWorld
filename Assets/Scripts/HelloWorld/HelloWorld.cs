@@ -8,16 +8,17 @@ public class HelloWorld : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-        Debug.Log("hello "+ this.name);    
+ 
+        Enemy enemy = new Enemy(" Voldemort");
+        Player player = new Player(" HP");
     }
 
     // Update is called once per frame
     void Update()
     {
-    
-    }
 
+
+    }
 
 
 }
