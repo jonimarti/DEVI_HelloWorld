@@ -15,6 +15,7 @@ public class ColorTheWorld : MonoBehaviour
     public string choosenTag;
     void Start()
     {
+        
 		if (findByTag)
         {
             allTheGameObjects = GameObject.FindGameObjectsWithTag(choosenTag);
@@ -25,8 +26,7 @@ public class ColorTheWorld : MonoBehaviour
 
         }
     }
-  
-        
+ 
 
     // Update is called once per frame
     void Update()
@@ -36,7 +36,8 @@ public class ColorTheWorld : MonoBehaviour
         if(item.GetComponent<MeshRenderer>())
          item.GetComponent<MeshRenderer>().material.color = color;
         }
-        
 
+        
+        //transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
     }
 }
