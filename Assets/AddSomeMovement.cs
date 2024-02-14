@@ -16,9 +16,9 @@ public class AddSomeMovement : MonoBehaviour
     void Update()
     {
         checkMovement();
-        //checkScale();
+        checkScale();
         //UpAndDownAnimation();
-        checkRotation();
+        //checkRotation();
     }
 
     private void checkRotation()
