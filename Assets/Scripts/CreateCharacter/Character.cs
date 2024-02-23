@@ -22,9 +22,9 @@ namespace PlayableCharacters
 		public string name;
 
 
-		[SerializeField]
+		
 		private int healthPoints = 1;
-
+		[SerializeField]
 		public delegate void CharacterKilled(Character killer, Character killed);
 		public event CharacterKilled OnKilled;
 

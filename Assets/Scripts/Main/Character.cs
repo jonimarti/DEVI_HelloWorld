@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Juego
+namespace Game
 {
 
     public enum Status

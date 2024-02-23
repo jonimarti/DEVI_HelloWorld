@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class HelloWorld : MonoBehaviour
 {
+    Enemy enemy;
     // Start is called before the first frame update
     void Start()
     {
  
-        Enemy enemy = new Enemy(" Voldemort");
+        enemy = new Enemy(" Voldemort");
         Player player = new Player(" HP");
     }
 
