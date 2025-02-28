@@ -6,6 +6,7 @@ using UnityEngine;
 public class ColorTheWorld : MonoBehaviour
 {
     // Start is called before the first frame update
+    [Serialize]
     Object[] allTheGameObjects;
     [Serialize]
     public Color color;
@@ -25,7 +26,7 @@ public class ColorTheWorld : MonoBehaviour
             allTheGameObjects = GameObject.FindObjectsOfType(typeof(MonoBehaviour));
 
         }
-    }
+    }   
  
 
     // Update is called once per frame
@@ -36,8 +37,6 @@ public class ColorTheWorld : MonoBehaviour
         if(item.GetComponent<MeshRenderer>())
          item.GetComponent<MeshRenderer>().material.color = color;
         }
-
         
-        //transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
     }
 }

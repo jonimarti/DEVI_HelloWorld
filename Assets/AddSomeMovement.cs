@@ -29,13 +29,11 @@ public class AddSomeMovement : MonoBehaviour
       //  transform.Rotate(new Vector3(0, 180, 0) * Time.deltaTime);
 
     }
-
     private void UpAndDownAnimation()
     {
         ShouldGoUp();
         ShouldGoDown();
     }
-
     private void ShouldGoDown()
     {
         while (!isGoingUp && transform.position.x > 0)
@@ -47,7 +45,6 @@ public class AddSomeMovement : MonoBehaviour
             }
         }
     }
-
     private void ShouldGoUp()
     {
         while (isGoingUp && transform.position.x < 8)
@@ -59,7 +56,6 @@ public class AddSomeMovement : MonoBehaviour
             }
         }
     }
-
     private void checkScale()
     {
         if (Input.GetKeyDown(KeyCode.Z))  
@@ -87,7 +83,6 @@ public class AddSomeMovement : MonoBehaviour
             transform.localScale += Vector3.down;
         }
     }
-
     private void checkMovement()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
